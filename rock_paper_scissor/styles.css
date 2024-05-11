@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#header {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#theme-buttons {
+    margin-bottom: 20px;
+}
+
+#theme-buttons button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+
+#theme-buttons button:hover {
+    background-color: #555;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.score {
+    margin: 0 20px;
+}
+
+.score p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#reset-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border: 3px;
+}
+
+#reset-button:hover {
+    background-color: #555;
+}
+
+.choice {
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    margin-bottom:10px;
+    /* transition: transform 0.3s ease; */
+}
+
+.choice:hover img {
+    transform: scale(1.3);
+    transition: 0.3s ease;
+}
+
+.choice img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #DC143C;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.light-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.blue-theme {
+    background-color: #34c7f8;
+    color: #fff;
+}
+

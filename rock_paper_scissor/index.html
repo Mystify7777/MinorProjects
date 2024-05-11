@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="header">Rock Paper Scissors</h1>
+        <div id="theme-buttons">
+            <button onclick="changeTheme('dark')">Dark  Theme</button>
+            <button onclick="changeTheme('light')">Light Theme</button>
+            <button onclick="changeTheme('blue')">Blue Theme</button>
+        </div>
+        <div id="scoreboard">
+            <div class="score">
+                <p>User</p>
+                <p id="userScore">0</p>
+            </div>
+            <div class="score">
+                <p>Computer</p>
+                <p id="computerScore">0</p>
+            </div>
+            <div class="score">
+                <p>Ties</p>
+                <p id="tieScore">0</p>
+            </div>
+        </div>
+        <div id="game">
+            <div class="choice" id="rock" onclick="playGame('rock')">
+                <img src="images/rock.png" alt="Rock">
+            </div>
+            <div class="choice" id="paper" onclick="playGame('paper')">
+                <img src="images/paper.png" alt="Paper">
+            </div>
+            <div class="choice" id="scissors" onclick="playGame('scissors')">
+                <img src="images/scissors.png" alt="Scissors">
+            </div>
+        </div>
+        <div id="result"></div>
+        <button id="reset-button" onclick="resetGame()">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
