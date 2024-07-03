@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
       navigator.geolocation.getCurrentPosition((position) => {
         long = position.coords.longitude;
         lat = position.coords.latitude;
-  
+        //will update when I get rich.
         const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=YOUR_API_KEY&units=metric`;
   
         fetch(api)
