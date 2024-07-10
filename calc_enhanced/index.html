@@ -30,15 +30,15 @@
         <button class="button" onclick="appendNumber('0')">0</button>
         <button class="button" onclick="appendDot()">.</button>
         <button class="button equal" onclick="calculateResult()">=</button>
-        <button class="button" onclick="appendNumber('-')">+/-</button>
+        <button class="button" onclick="appendOperator('^')">^</button>
+        <button class="button" onclick="calculateFactorial()">x!</button>
+        <button class="button" onclick="calculateLog()">log</button>
+        <button class="button" onclick="toggleHistoryDrawer()">History</button>
       </div>
     </div>
-    <div class="history-container">
-      <button class="toggle-history" onclick="toggleHistory()">Show History</button>
-      <div class="history" id="history">
-        <button class="button clear-history" onclick="clearHistory()">Clear History</button>
-        <ul id="history-list"></ul>
-      </div>
+    <div class="history-drawer" id="history-drawer">
+      <button class="button clear-history" onclick="clearHistory()">Clear History</button>
+      <ul id="history-list"></ul>
     </div>
   </div>
   <script src="script.js"></script>

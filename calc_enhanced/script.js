@@ -76,6 +76,9 @@ function calculateResult() {
     case '%':
       result = prev % current;
       break;
+    case '^':
+      result = Math.pow(prev, current);
+      break;
     default:
       return;
   }
@@ -85,6 +88,29 @@ function calculateResult() {
   operator = '';
   previousInput = '';
   resultDisplayed = true;
+  updateDisplay();
+}
+
+function calculateFactorial() {
+  const current = parseFloat(currentInput);
+  if (isNaN(current) || current < 0) return;
+  let result = 1;
+  for (let i = 1; i <= current; i++) {
+    result *= i;
+  }
+  const historyEntry = `${currentInput}! = ${result}`;
+  addHistory(historyEntry);
+  currentInput = result.toString();
+  updateDisplay();
+}
+
+function calculateLog() {
+  const current = parseFloat(currentInput);
+  if (isNaN(current) || current <= 0) return;
+  const result = Math.log10(current);
+  const historyEntry = `log(${currentInput}) = ${result}`;
+  addHistory(historyEntry);
+  currentInput = result.toString();
   updateDisplay();
 }
 
@@ -102,14 +128,8 @@ function clearHistory() {
   historyList.innerHTML = '';
 }
 
-function toggleHistory() {
-  const history = document.getElementById('history');
+function toggleHistoryDrawer() {
+  const drawer = document.getElementById('history-drawer');
   historyVisible = !historyVisible;
-  if (historyVisible) {
-    history.style.display = 'block';
-    document.querySelector('.toggle-history').textContent = 'Hide History';
-  } else {
-    history.style.display = 'none';
-    document.querySelector('.toggle-history').textContent = 'Show History';
-  }
+  drawer.classList.toggle('visible', historyVisible);
 }

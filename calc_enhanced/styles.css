@@ -11,13 +11,15 @@ body {
 .container {
   display: flex;
   gap: 20px;
+  position: relative;
 }
 
 .calculator {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 320px;
+  padding: 20px;
   transition: transform 0.3s;
 }
 
@@ -31,15 +33,14 @@ body {
   font-size: 2em;
   text-align: right;
   padding: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  padding: 20px;
 }
 
 .button {
@@ -62,7 +63,6 @@ body {
 }
 
 .button.equal {
-  grid-column: span 2;
   background-color: #ff9500;
   color: #fff;
 }
@@ -75,34 +75,23 @@ body {
   background-color: #c07000;
 }
 
-.history-container {
-  text-align: center;
-}
-
-.toggle-history {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.toggle-history:hover {
-  background-color: #0056b3;
-}
-
-.history {
+.history-drawer {
   display: none;
-  margin-top: 20px;
-  width: 300px;
+  position: absolute;
+  right: -320px;
+  top: 0;
+  width: 320px;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: left;
+  transition: transform 0.3s;
+}
+
+.history-drawer.visible {
+  display: block;
+  transform: translateX(-320px);
 }
 
 .clear-history {
