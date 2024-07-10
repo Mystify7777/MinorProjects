@@ -4,30 +4,34 @@ let currentInput = '';
 let operator = '';
 let previousInput = '';
 let historyVisible = false;
+let resultDisplayed = false;
 
 function appendNumber(number) {
-  if (currentInput.includes('.') && number === '.') return;
-  currentInput += number;
+  if (resultDisplayed) {
+    currentInput = '';
+    resultDisplayed = false;
+  }
+  if (number === '-' && currentInput === '') {
+    currentInput += number;
+  } else if (number !== '-' || currentInput !== '-') {
+    currentInput += number;
+  }
   updateDisplay();
 }
 
 function appendOperator(op) {
-  if (currentInput === '' && previousInput === '') return;
-  if (currentInput === '' && previousInput !== '') {
-    operator = op;
-    return;
-  }
-  if (previousInput === '') {
-    previousInput = currentInput;
-    currentInput = '';
-    operator = op;
-    return;
-  }
-  calculateResult();
+  if (currentInput === '-' || currentInput === '') return;
+  if (operator !== '') calculateResult();
+  previousInput = currentInput;
   operator = op;
+  currentInput = '';
 }
 
 function appendDot() {
+  if (resultDisplayed) {
+    currentInput = '';
+    resultDisplayed = false;
+  }
   if (!currentInput.includes('.')) {
     currentInput += '.';
     updateDisplay();
@@ -42,7 +46,12 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-  currentInput = currentInput.slice(0, -1);
+  if (resultDisplayed) {
+    currentInput = '';
+    resultDisplayed = false;
+  } else {
+    currentInput = currentInput.slice(0, -1);
+  }
   updateDisplay();
 }
 
@@ -75,11 +84,12 @@ function calculateResult() {
   currentInput = result.toString();
   operator = '';
   previousInput = '';
+  resultDisplayed = true;
   updateDisplay();
 }
 
 function updateDisplay() {
-  display.textContent = currentInput === '' ? '0' : currentInput;
+  display.textContent = currentInput === '' || currentInput === '-' ? '0' : currentInput;
 }
 
 function addHistory(entry) {
