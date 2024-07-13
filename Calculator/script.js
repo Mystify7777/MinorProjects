@@ -1,3 +1,4 @@
+// Implementing code to add interactiveness
 let display = document.getElementById('display');
 let currentInput = '';
 let operator = '';
