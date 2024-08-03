@@ -1,38 +1,198 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
+  /**
+ * Set the font family, display, and alignment for the body element.
+ */
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  color: #000000a9;
+  overflow: hidden;
+}
+
+body::before {
+  /**
+ * Add a background image to the body element.
+ */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://img.freepik.com/free-photo/beautiful-shot-grassy-fields-with-trees-blue-cloudy-sky_181624-12414.jpg?t=st=1722613773~exp=1722617373~hmac=2f7405c2fe020e2255bbc26893b53f8cb6c14fd7de8f9e99d56976326aa0d952&w=1060")
+      no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.weather-container {
+  /**
+ * Style the weather container element.
+ */
+  position: relative;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out
+}
+.weather-container:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.01); 
+  box-shadow: 0 0 15px rgba(212, 212, 212, 0.69);
+}
+input[type="text"] {
+  /**
+ * Style the text input element.
+ */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-right: 10px;
+  transition: box-shadow 0.3s ease;
+  background: #fff;
+  color: #333;
+}
+
+input[type="text"]:hover {
+  /**
+ * Style the hover text input element.
+ */
   
-  .container {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  .weather-info {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .weather-info h2 {
-    margin-bottom: 10px;
-  }
-  
-  #location {
-    font-weight: bold;
-  }
-  
-  #temperature {
-    font-size: 24px;
-  }
-  
-  #description {
-    margin-top: 10px;
-  }
-  /* Looks good enough */
+  box-shadow: 0 0 10px rgba(122, 123, 255, 0.5);
+}
+
+input[type="text"]:focus {
+  /**
+ * Style the focused text input element.
+ */
+  outline: 1px solid grey;
+  box-shadow: 0 0 8px rgba(122, 123, 255, 0.5);
+}
+
+button {
+  /**
+ * Style the button element.
+ */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #515c69;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  /**
+ * Style the hovered button element.
+ */
+
+  background: #6d7785;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(36, 34, 34);
+}
+
+#weather-info {
+   /**
+ * Style the weather info element.
+ */
+  margin-top: 20px;
+}
+
+.city-header {
+   /**
+ * Style the city header element.
+ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#city-name {
+  /**
+ * Style the city name element.
+ */
+  margin: 0;
+  margin-right: 10px;
+}
+
+#weather-icon {
+   /**
+ * Style the weather icon element.
+ */
+  width: 50px;
+  height: 50px;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+#weather-icon:hover {
+  transform: scale(1.2); 
+}
+
+/**
+ * Style the weather table element.
+ */
+#weather-table {
+   
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  display: none;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#weather-table th,
+#weather-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #333;
+}
+
+#weather-table th {
+  background-color: #ada8a8db;
+  color: #fff;
+  font-weight: bold;
+}
+
+#weather-table tr:nth-child(even) {
+  background-color: #f5f2f26f;
+}
+
+#weather-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+#weather-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+#weather-table caption {
+  caption-side: top;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: bold;
+}
+
+.hover-dark{
+  transition: color 0.3s ease-in-out;
+}
+
+.hover-dark:hover{
+  color:#111
+}

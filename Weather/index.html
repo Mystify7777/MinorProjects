@@ -1,24 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <div class="container">
-    <h1>Weather App</h1>
-    <div class="weather-info">
-      <h2>Loading...</h2>
-      <p id="location"></p>
-      <p id="temperature"></p>
-      <p id="description"></p>
-    </div>
-    <p>Too poor to afford an API! :-(</p>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="icon.png" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- 
+            Weather App Container
+            ===============
+            This container holds the entire weather app UI.
+        -->
+        <div class="weather-container">
+            <!-- 
+                App Title
+                =========
+                The title of the weather app.
+            -->
+            <h1 class = "hover-dark">Weather App</h1>
+            <!-- 
+                City Input Field
+                ===============
+                Input field for users to enter the city name.
+            -->
+            <input type="text" id="city" placeholder="Enter city" />
+            <!-- 
+                Search Button
+                ============
+                Button to trigger the weather data fetch.
+            -->
+            <button id="search">Get Weather</button>
+            <!-- 
+                Weather Information Container
+                =========================
+                Container to display the weather information.
+            -->
+            <div id="weather-info">
+                <!-- 
+                    City Header
+                    ===========
+                    Displays the city name and weather icon.
+                -->
+                <div class="city-header">
+                    <!-- 
+                        City Name
+                        =========
+                        Displays the city name.
+                    -->
+                    <h2 class = "hover-dark" id="city-name"></h2>
+                    <!-- 
+                        Weather Icon
+                        ============
+                        Displays the weather icon.
+                    -->
+                    <img id="weather-icon" src="" alt="Weather icon" />
+                </div>
+                <!-- 
+                    Weather Table
+                    ============
+                    Displays the weather data in a table format.
+                -->
+                <table id="weather-table">
+                    <!-- 
+                        Temperature Row
+                        ==============
+                        Displays the temperature data.
+                    -->
+                    <tr>
+                        <th>Temperature</th>
+                        <td id="temperature"></td>
+                    </tr>
+                    <!-- 
+                        Description Row
+                        ==============
+                        Displays the weather description.
+                    -->
+                    <tr>
+                        <th>Description</th>
+                        <td id="description"></td>
+                    </tr>
+                    <!-- 
+                        Humidity Row
+                        ============
+                        Displays the humidity data.
+                    -->
+                    <tr>
+                        <th>Humidity</th>
+                        <td id="humidity"></td>
+                    </tr>
+                    <!-- 
+                        Wind Speed Row
+                        ==============
+                        Displays the wind speed data.
+                    -->
+                    <tr>
+                        <th>Wind Speed</th>
+                        <td id="wind-speed"></td>
+                    </tr>
+                    <!-- 
+                        Pressure Row
+                        ============
+                        Displays the pressure data.
+                    -->
+                    <tr>
+                        <th>Pressure</th>
+                        <td id="pressure"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
