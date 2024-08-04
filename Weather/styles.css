@@ -1,7 +1,5 @@
+/* Basic body styling with background image */
 body {
-  /**
- * Set the font family, display, and alignment for the body element.
- */
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -9,110 +7,118 @@ body {
   height: 100vh;
   margin: 0;
   position: relative;
-  color: #000000a9;
+  color: #d3d3d3;
   overflow: hidden;
 }
 
 body::before {
-  /**
- * Add a background image to the body element.
- */
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://img.freepik.com/free-photo/beautiful-shot-grassy-fields-with-trees-blue-cloudy-sky_181624-12414.jpg?t=st=1722613773~exp=1722617373~hmac=2f7405c2fe020e2255bbc26893b53f8cb6c14fd7de8f9e99d56976326aa0d952&w=1060")
+  background: url("https://c4.wallpaperflare.com/wallpaper/597/73/315/night-moon-sky-clouds-wallpaper-preview.jpg")
       no-repeat center center fixed;
   background-size: cover;
   z-index: -1;
-  opacity: 0.8;
 }
 
-.weather-container {
-  /**
- * Style the weather container element.
- */
+/* Weather container border with gradient background */
+.weather-container-border {
   position: relative;
   text-align: center;
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(to bottom, rgba(57, 73, 171, 0.8), rgba(26, 35, 126, 0.8), rgba(13, 71, 161, 0.8));
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 610px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.weather-container-border:hover {
+  background: linear-gradient(to bottom, rgba(19, 24, 57, 0.8), rgba(26, 35, 126, 0.8), rgba(7, 40, 89, 0.8));
+  padding: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Weather container with gradient background */
+.weather-container {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(27, 27, 56, 0.6), rgba(37, 37, 90, 0.6), rgba(32, 32, 80, 0.6));
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(7, 7, 88, 0.5);
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
-  transition: all 0.3s ease-out
+  transition: all 0.3s ease-out;
 }
+
 .weather-container:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.01); 
-  box-shadow: 0 0 15px rgba(212, 212, 212, 0.69);
+  background: linear-gradient(to bottom, rgba(27, 27, 56, 1), rgba(37, 37, 90, 1), rgb(23, 23, 81));
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(7, 7, 88, 0.7);
 }
+
+/* Input text styling with hover and focus effects */
 input[type="text"] {
-  /**
- * Style the text input element.
- */
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   border-radius: 5px;
   width: 200px;
   margin-right: 10px;
-  transition: box-shadow 0.3s ease;
-  background: #fff;
-  color: #333;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  background: #bec7fd;
+  color: #0c0c0c;
+  text-decoration:solid
 }
 
 input[type="text"]:hover {
-  /**
- * Style the hover text input element.
- */
-  
-  box-shadow: 0 0 10px rgba(122, 123, 255, 0.5);
+  box-shadow: 0 0 15px rgba(122, 123, 255, 0.5);
+  border-color: #317cbd;
 }
 
 input[type="text"]:focus {
-  /**
- * Style the focused text input element.
- */
-  outline: 1px solid grey;
+  outline: 2px solid #282638;
   box-shadow: 0 0 8px rgba(122, 123, 255, 0.5);
+  border-color: #7300ff;
 }
 
+/* Button styling with hover effect */
 button {
-  /**
- * Style the button element.
- */
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background: #515c69;
+  background: #3949ab;
   color: #fff;
   cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
 }
 
 button:hover {
-  /**
- * Style the hovered button element.
- */
-
-  background: #6d7785;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgb(36, 34, 34);
+  background: #5c6bc0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid #333;
 }
 
+button:active {
+  background: #2e3b87;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+  transform: translateY(2px);
+}
+
+
+/* Weather info section */
 #weather-info {
-   /**
- * Style the weather info element.
- */
   margin-top: 20px;
 }
 
+/* City header styling */
 .city-header {
-   /**
- * Style the city header element.
- */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,17 +126,12 @@ button:hover {
 }
 
 #city-name {
-  /**
- * Style the city name element.
- */
   margin: 0;
   margin-right: 10px;
 }
 
+/* Weather icon with hover effect */
 #weather-icon {
-   /**
- * Style the weather icon element.
- */
   width: 50px;
   height: 50px;
   display: none;
@@ -138,19 +139,28 @@ button:hover {
 }
 
 #weather-icon:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
-/**
- * Style the weather table element.
- */
+/* Text hover effect for brightness */
+.hover-bright {
+  transition: color 0.3s ease-in-out;
+}
+
+.hover-bright:hover {
+  color: #fff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.8), 
+  0 0 2px rgba(255, 255, 255, 0.6), 
+  0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Weather table styling */
 #weather-table {
-   
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
   display: none;
-  background-color: #fff;
+  background-color: #303f9f;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -160,39 +170,29 @@ button:hover {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
-  color: #333;
+  color: #fff;
 }
 
 #weather-table th {
-  background-color: #ada8a8db;
-  color: #fff;
+  background-color: #3949ab;
   font-weight: bold;
 }
 
 #weather-table tr:nth-child(even) {
-  background-color: #f5f2f26f;
+  background-color: #3f51b5;
 }
 
 #weather-table tr:nth-child(odd) {
-  background-color: #fff;
+  background-color: #303f9f;
 }
 
 #weather-table tr:hover {
-  background-color: #f1f1f1;
+  background-color: #5c6bc0;
 }
 
 #weather-table caption {
   caption-side: top;
   padding: 10px;
   font-size: 1.2em;
-  color: #333;
   font-weight: bold;
-}
-
-.hover-dark{
-  transition: color 0.3s ease-in-out;
-}
-
-.hover-dark:hover{
-  color:#111
 }
