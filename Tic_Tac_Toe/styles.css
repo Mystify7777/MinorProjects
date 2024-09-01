@@ -1,63 +1,92 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-body{
-  background-color: #548687;
+
+body {
+  background-color: #2E8B57; /* Soft green background */
+  font-family: 'Comic Neue', cursive;
+  color: #FAF3DD; /* Light cream text */
   text-align: center;
+  padding: 20px;
 }
-.container{
+
+h1 {
+  color: #61fff2; /* Soft coral for the header */
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #35524A; /* Dark green shadow */
+}
+
+.container {
   height: 70vh;
   display: flex;
   justify-content: center;
-  
   align-items: center;
 }
-.game{
+
+.game {
   height: 60vmin;
-  width:  60vmin;
+  width: 60vmin;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   gap: 1.5vmin;
- /* border: 2px solid black; */
 }
-.box{
+
+.box {
   height: 18vmin;
   width: 18vmin;
-  border-radius: 1rem;
+  border-radius: 10px;
   border: none;
-  box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 8vmin;
-  color: black;
- background-color: antiquewhite;
+  color: #2E8B57; /* Matching the background but slightly darker */
+  background-color: #FFD700; /* Soft gold background */
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
 }
-.reset{
-  padding: 2px;
-  width: 110px;
-  height: 40px;
+
+.box:hover {
+  background-color: #FFDDC1; /* Soft peach hover effect */
+  transform: scale(1.05);
+}
+
+.reset, #new-btn {
+  padding: 10px 20px;
   font-size: 1.8vmin;
-  background-color: #191938;
-  color: white;
-  border-radius: 2em;
+  background-color: #35524A; /* Dark green background for buttons */
+  color: #FAF3DD; /* Light cream text */
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
-#new-btn{
-  padding: 2px;
-  width: 110px;
-  height: 40px;
-  font-size: 1.8vmin;
-  background-color: #191938;
-  color: white;
-  border-radius: 2em;
+
+.reset:hover, #new-btn:hover {
+  background-color: #3B7A57; /* Slightly lighter green on hover */
 }
-#msg{
-  color: azure;
-  font-size: 5vmin;
-}
-.msg-container{
+
+.msg-container {
   height: 30vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.hide{
+
+#msg {
+  color: #FFDDC1; /* Soft peach for the winner message */
+  font-size: 5vmin;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #35524A; /* Dark green shadow */
+}
+
+.hide {
   display: none;
 }
