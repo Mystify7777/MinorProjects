@@ -28,4 +28,7 @@ This is a simple **To-Do List Web Application** built using HTML, CSS, and JavaS
 
 The tasks are saved in the browser's local storage, meaning the task list will persist even after the browser is closed or the page is refreshed. Local storage stores key-value pairs and is limited to the user's browser.
 
+## Screenshots
+
+![To-Do List App Screenshot](https://github.com/Mystify7777/MinorProjects/raw/main/To-Do-app/screenshot.png)
 
