@@ -30,5 +30,5 @@ The tasks are saved in the browser's local storage, meaning the task list will p
 
 ## Screenshots
 
-![To-Do List App Screenshot]([https://github.com/Mystify7777/MinorProjects/blob/main/To-Do-app/thumbnailtdl.png])
+![To-Do List App Screenshot](https://github.com/Mystify7777/MinorProjects/blob/main/To-Do-app/thumbnailtdl.png)
 
