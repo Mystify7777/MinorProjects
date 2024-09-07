@@ -38,8 +38,8 @@ const updateTaskList = () => {
         taskItem.innerHTML = `
             ${task.text}
             <div>
-                <button onclick="toggleComplete(${task.id})">✔</button>
-                <button onclick="deleteTask(${task.id})">✖</button>
+                <button class="mark-btn" onclick="toggleComplete(${task.id})">✔</button>
+                <button class="delete-btn" onclick="deleteTask(${task.id})">✖</button>
             </div>
         `;
         taskList.appendChild(taskItem);
