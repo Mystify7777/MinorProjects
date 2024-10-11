@@ -11,10 +11,22 @@
         <h1>To-Do List</h1>
     </header>
     <div class="todo-app">
-        <input type="text" id="new-task-input" placeholder="Add a new task..." />
-        <button id="add-task-btn">Add Task</button>
+        <div class="task-input-container">
+            <input type="text" id="new-task-input" placeholder="Add a new task..." />
+        </div>
+        <div class="task-input-container">
+            <input type="text" id="description-input" placeholder="Add a description..." />
+        </div>
+        <div class="buttons-container">
+            <button id="add-task-btn">Add Task</button>
+            <button id="delete-completed-btn">Delete Completed Tasks</button>
+            <button id="delete-all-btn">Delete All Tasks</button>
+        </div>
         <div class="task-container">
             <ul id="task-list"></ul>
+        </div>
+        <div class="description-container">
+            <p id="description-content">Select a task to know more about it.</p>
         </div>
     </div>
     <script src="script.js"></script>
