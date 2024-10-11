@@ -112,7 +112,7 @@ li .task-name {
 .description-container {
     margin-top: 15px;
     width: 400px; /* Match width */
-    padding: 15px;
+    padding: 12px;
     background-color: #f0f0f0;
     border-radius: 8px;
     border: 1px solid #ccc;
@@ -124,9 +124,4 @@ li .task-name {
     color: #333;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .task-input-container, .buttons-container, .task-container, .description-container {
-        width: 100%;
-    }
-}
+
