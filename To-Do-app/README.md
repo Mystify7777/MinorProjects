@@ -32,3 +32,6 @@ The tasks are saved in the browser's local storage, meaning the task list will p
 
 ![To-Do List App Screenshot](https://github.com/Mystify7777/MinorProjects/blob/main/To-Do-app/thumbnailtdl.png)
 
+### Post Edit
+![To-Do List App Screenshot](https://github.com/Mystify7777/MinorProjects/blob/main/To-Do-app/thumtdl.png)
+
